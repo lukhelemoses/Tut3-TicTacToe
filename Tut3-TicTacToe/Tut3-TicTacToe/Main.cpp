@@ -4,16 +4,22 @@
 using namespace std;
 
 int main(){
+	
 
-	int matrix[3][3] = { 1, 2, 3, 4, 5, 6, 7, 8, 9 };
-
-	for (int i = 0; i < 3; i++)
+	TicTacToe a;
+	int p1, p2;
+	for (;;)
 	{
-		cout << matrix[i][0] <<"\t"<< matrix[i][1] <<"\t"<< matrix[i][2] << endl;
+		cout << "Play" << endl;
+		cin >>p1;
+		a.move(p1,0);
+		cout << "player2 Make your move";
+		cin >> p2;
+		a.move(0, p2);
+
+
+
 	}
-
-
-
 
 	system("pause");
 	return 0;

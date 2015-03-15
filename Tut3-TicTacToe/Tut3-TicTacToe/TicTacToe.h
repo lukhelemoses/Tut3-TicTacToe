@@ -1,13 +1,16 @@
-#pragma once
+#include<iostream>
+
 class TicTacToe
 {
 public:
+	int i, j;
+	int matrix[3][3];
 	TicTacToe(int,int);
 	~TicTacToe();
-	void restart(int);
-	void move(int);
+	void restart();
+	void move(int,int);
 	void print();
-	void isWon(int);
+	int isWon();
 private:
 	int player1;
 	int player2;
