@@ -4,8 +4,8 @@ using namespace std;
 
 TicTacToe::TicTacToe(int p1=0,int p2=0)
 {
-	int  matrix[3][3] = { 1, 2, 3, 4, 5, 6, 7, 8, 9 };
-
+  
+	char matrix[3][3] = { 1, 2, 3, 4, 5, 6, 7, 8, 9 };
 	for (int i = 0; i < 3; i++)
 		cout << matrix[i][0] << "\t" << matrix[i][1] << "\t" << matrix[i][2] << endl;
 
@@ -30,13 +30,13 @@ void TicTacToe::move(int player1, int player2)
 			for (int j = 0; j < 3;j++)
 			{
 				
-				if (matrix[i][j] = player1)
+				if (matrix[i][j] ==player1)
 				{
 					matrix[i][j] = 'X';
 					
 				}
 				else
-					if (matrix[i][j] = player2)
+					if (matrix[i][j] == player2)
 					{
 						matrix[i][j] = 'W';
 					
@@ -56,7 +56,7 @@ void TicTacToe::print()
 	}
 
 }
-int TicTacToe::isWon()
+bool TicTacToe::isWon()
 {
 	if (matrix[0][0] == matrix[0][1] && matrix[0][1] == matrix[0][2])
 	{
@@ -64,7 +64,7 @@ int TicTacToe::isWon()
 			cout << "\nPlayer one has won";
 		else
 			cout << "\nPlayer two has won";
-
+		return true;
 	}
 	else
 		if (matrix[1][0] == matrix[1][1] && matrix[1][1] == matrix[1][2])
@@ -74,6 +74,7 @@ int TicTacToe::isWon()
 				cout << "\nPlayer one has won";
 			else
 				cout << "\nPlayer two has won";
+			return true;
 		}
 		else
 			if (matrix[2][0] == matrix[2][1] && matrix[2][1] == matrix[2][2])
@@ -83,7 +84,7 @@ int TicTacToe::isWon()
 					cout << "\nPlayer one has won";
 				else
 					cout << "\nPlayer two has won";
-
+				return true;
 			}
 			else
 				if (matrix[0][0] == matrix[1][0] && matrix[1][0] == matrix[2][0])
@@ -93,7 +94,7 @@ int TicTacToe::isWon()
 						cout << "\nPlayer one has won";
 					else
 						cout << "\nPlayer two has won";
-
+					return true;
 				}
 				else
 					if (matrix[0][1] == matrix[1][1] && matrix[1][1] == matrix[2][1])
@@ -103,7 +104,7 @@ int TicTacToe::isWon()
 							cout << "\nPlayer one has won";
 						else
 							cout << "\nPlayer two has won";
-
+						return true;
 					}
 					else
 						if (matrix[0][2] == matrix[1][2] && matrix[1][2] == matrix[2][2])
@@ -113,7 +114,7 @@ int TicTacToe::isWon()
 								cout << "\nPlayer one has won";
 							else
 								cout << "\nPlayer two has won";
-
+							return true;
 						}
 
 						else
@@ -124,7 +125,7 @@ int TicTacToe::isWon()
 									cout << "\nPlayer one has won";
 								else
 									cout << "\nPlayer two has won";
-
+								return true;
 							}
 							else
 								if (matrix[0][2] == matrix[1][1] && matrix[1][1] == matrix[3][1])
@@ -135,8 +136,9 @@ int TicTacToe::isWon()
 									else
 										cout << "\nPlayer two has won";
 
-
+									return true;
 								}
+
 								else
 									return 0;
 
@@ -144,7 +146,7 @@ int TicTacToe::isWon()
 
 void TicTacToe::restart()
 {
-int matrix[3][3] = { 1, 2, 3, 4, 5, 6, 7, 8, 9 };
+char matrix[3][3] = { 1, 2, 3, 4, 5, 6, 7, 8, 9 };
 
 
 }

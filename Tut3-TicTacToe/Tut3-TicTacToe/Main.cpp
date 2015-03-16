@@ -20,7 +20,6 @@ int main(){
 			cin >> p2;
 			a.move(0, p2);
 		}
-		
 	}
 
 	system("pause");
