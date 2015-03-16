@@ -2,21 +2,20 @@
 #include<iostream>
 using namespace std;
 
-TicTacToe::TicTacToe(int p1=0,int p2=0)
+TicTacToe::TicTacToe(int p1,int p2)
 {
-  
-	char matrix[3][3] = { 1, 2, 3, 4, 5, 6, 7, 8, 9 };
-	for (int i = 0; i < 3; i++)
-		cout << matrix[i][0] << "\t" << matrix[i][1] << "\t" << matrix[i][2] << endl;
-
-	if (p1 < 1 && p1 >> 9)
-	{
-		player1 = p1;
-	}
-	if (p2 < 1 && p2>9)
-	{
-		player2 = p2;
-	}
+	matrix[0][0] =' 1';
+	matrix[0][1] = '2';
+		matrix[0][2] = '3';
+		matrix[1][0] = '4';
+		matrix[1][1] = '5';
+	matrix[1][2] = '6';
+	matrix[2][0] = '7';
+	matrix[2][1] = '8';
+	matrix[2][2] = '9';
+	
+	player1 = p1;
+	player2 = p2;
 }
 
 
@@ -24,36 +23,27 @@ TicTacToe::~TicTacToe()
 {
 }
 void TicTacToe::move(int player1, int player2)
-{
-	for (int i = 0; i < 3;i++)
-		{
-			for (int j = 0; j < 3;j++)
-			{
-				
-				if (matrix[i][j] ==player1)
-				{
-					matrix[i][j] = 'X';
-					
-				}
-				else
-					if (matrix[i][j] == player2)
-					{
-						matrix[i][j] = 'W';
-					
-					}
-		}
-	}
-	
-}
-void TicTacToe::print()
-{
+{ 
 	for (i = 0; i < 3; i++)
 	{
 		for (j = 0; j < 3; j++)
 		{
-			cout << matrix[i][j] << "\t" << matrix[i][j] << "\t" << matrix[i][j] << endl;
+			if (player1 == matrix[i][j])
+				matrix[i][j] = 'X';
+			else
+				if (player2 == matrix[i][j])
+					matrix[i][j] = 'O';
+
 		}
 	}
+
+	
+}
+void TicTacToe::print()
+{
+	cout << matrix[0][0] << "\t" << matrix[0][1] << "\t" << matrix[0][2];
+	cout <<"\n"<< matrix[1][0] << "\t" << matrix[1][1] << "\t" << matrix[1][2];
+	cout <<"\n" <<matrix[2][0] << "\t" << matrix[2][1] << "\t" << matrix[2][2];
 
 }
 bool TicTacToe::isWon()
@@ -146,7 +136,7 @@ bool TicTacToe::isWon()
 
 void TicTacToe::restart()
 {
-char matrix[3][3] = { 1, 2, 3, 4, 5, 6, 7, 8, 9 };
+
 
 
 }

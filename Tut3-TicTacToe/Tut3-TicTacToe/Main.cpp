@@ -7,21 +7,30 @@ int main(){
 	
 
 	TicTacToe a;
-	int p1, p2;
-	for (;;)
-	{
-		int status = a.isWon();
-		if (status == 0)
+	char p1, p2;
+	int n=1;
+	a.print();
+	while (true)
+	{   
+		
+		cout << "\nPlayer1 play:\t";
+		cin >> p1;
+		a.move(p1, 0);
+		a.print();
+		a.isWon();
+		if (a.isWon() == 1)
 		{
-			cout << "Play" << endl;
-			cin >> p1;
-			a.move(p1, 0);
-			cout << "player2 Make your move";
-			cin >> p2;
-			a.move(0, p2);
+			a.isWon();
+			cout << "\n\nGAME OVER";
+			break;
 		}
+		cout << "\nplayer2 play:\t";
+		cin >> p2;
+		a.move(0,p2);
+		a.print();
+		a.isWon();
+		
 	}
-
 	system("pause");
 	return 0;
 }

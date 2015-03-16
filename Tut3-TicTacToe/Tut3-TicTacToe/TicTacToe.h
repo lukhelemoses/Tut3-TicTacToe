@@ -6,7 +6,7 @@ public:
 	int i, j;
 	char matrix[3][3];
 
-	TicTacToe(int,int);
+	TicTacToe(int=0,int=0);
 	~TicTacToe();
 	void restart();
 	void move(int,int);
