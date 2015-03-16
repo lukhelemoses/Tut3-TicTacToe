@@ -12,6 +12,7 @@ public:
 	void move(int,int);
 	void print();
 	bool isWon();
+
 private:
 	int player1;
 	int player2;

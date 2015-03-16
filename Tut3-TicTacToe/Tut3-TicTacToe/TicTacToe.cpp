@@ -24,10 +24,12 @@ TicTacToe::~TicTacToe()
 }
 void TicTacToe::move(int player1, int player2)
 { 
+	
 	for (i = 0; i < 3; i++)
 	{
 		for (j = 0; j < 3; j++)
 		{
+			
 			if (player1 == matrix[i][j])
 				matrix[i][j] = 'X';
 			else
@@ -130,7 +132,10 @@ bool TicTacToe::isWon()
 								}
 
 								else
+							
 									return 0;
+										
+									
 
 }
 

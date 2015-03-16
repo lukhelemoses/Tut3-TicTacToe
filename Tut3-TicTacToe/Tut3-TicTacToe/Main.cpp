@@ -13,7 +13,7 @@ int main(){
 	while (true)
 	{   
 		
-		cout << "\nPlayer1 play:\t";
+		cout << "\nPlayer1 play:\n";
 		cin >> p1;
 		a.move(p1, 0);
 		a.print();
@@ -24,7 +24,7 @@ int main(){
 			cout << "\n\nGAME OVER";
 			break;
 		}
-		cout << "\nplayer2 play:\t";
+		cout << "\nplayer2 play:\n";
 		cin >> p2;
 		a.move(0,p2);
 		a.print();
